@@ -114,12 +114,45 @@ nav .right a span {
 
 .skills-section h2 {
     text-align: center;
+    font-size: 35px;
 }
 
 .skills-section .text {
     text-align: center;
     margin-bottom: 20px;
 }
+
+.skills-section .cells {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skills-section .cells .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    width: 200px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 1.5px solid #d3d3d3;
+    border-radius: 5px;
+
+}
+
+.skills-section .cells .cell span {
+    font-size: 18px;
+}
+
+.skills-section .cells .cell img {
+    width:  30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 2px;;
+}
+
 
 @media (max-width: 850px) {
     /* Section 1: Hero */
@@ -167,4 +200,11 @@ nav .right a span {
     }
 
     /* Section 2: Skills */
+    .skills-section .text {
+        padding: 0 20px;
+    }
+    
+    .skills-section .cells .cell span {
+        font-size: 16px;
+    }
 }
