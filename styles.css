@@ -19,6 +19,9 @@ html {
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
+    /* Tackles zooming out and centering*/
+    max-width: 1400px;
+    margin: 0 auto;
 }
 /* styling for links */
 a {
@@ -196,6 +199,60 @@ nav .right a span {
     flex: 8;
 }
 
+/* Section 4: Contact */
+
+.contact-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.contact-section h2 {
+    font-size: 35px;
+}
+
+.contact-section .group {
+    display: flex;
+    gap: 50px;
+}
+
+.contact-section .group .text {
+    margin-top: 20px;
+    flex: 3;
+}
+
+.contact-section .group form {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+/* grouping styles together */
+.contact-section .group form input, 
+.contact-section .group form textarea {
+    font-family: 'Poppins', sans-serif;
+    border: 2px solid var(--link-color);
+    background-color: transparent;
+    padding: 10px;
+    margin-bottom: 15px;
+    outline: none;
+    resize: none;
+}
+
+.contact-section .group form button {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background-color:  var(--link-color);
+    border: none;
+    height: 50px;
+    cursor: pointer;
+    transition: .1s;
+}
+
+.contact-section .group form button:hover {
+    filter: brightness(.9);
+}
+
 @media (max-width: 850px) {
     /* Section 1: Hero */
     .hero-section .text h2 {
@@ -220,7 +277,12 @@ nav .right a span {
     .testimony-section .group{
         flex-direction: column;
     }
-    
+
+    /* Section 4: Contact */
+    .contact-section .group {
+        flex-direction: column;
+    }
+
 }
 @media (max-width: 600px) {
     /* NAVBAR */
@@ -257,5 +319,15 @@ nav .right a span {
     
     .skills-section .cells .cell span {
         font-size: 16px;
+    }
+
+    /* Section 3: Testimony */
+    .testimony-section {
+        padding: 0 20px;
+    }
+
+    /* Section 4: Contact */
+    .contact-section {
+        padding: 0 20px;
     }
 }
