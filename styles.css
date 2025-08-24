@@ -19,10 +19,15 @@ html {
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
-    /* Tackles zooming out and centering*/
+    /* Tackles zooming out and centering */
     max-width: 1400px;
     margin: 0 auto;
 }
+
+body hr {
+    margin-bottom: 25px;
+}
+
 /* styling for links */
 a {
     color: var(--link-color);
@@ -153,7 +158,7 @@ nav .right a span {
     width:  30px;
     height: 30px;
     object-fit: contain;
-    border-radius: 2px;;
+    border-radius: 2px;
 }
 
 /* Section 3: Testimony */
@@ -251,6 +256,14 @@ nav .right a span {
 
 .contact-section .group form button:hover {
     filter: brightness(.9);
+}
+
+/* Footer */
+footer {
+    margin-bottom: 100px;
+}
+footer p {
+ text-align: center;
 }
 
 @media (max-width: 850px) {

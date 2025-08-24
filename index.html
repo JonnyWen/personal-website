@@ -15,7 +15,7 @@
     <!-- links for our css code -->
     <link rel="stylesheet" href="styles.css">
 
-    <title>Portfolio</title>
+    <title>MyPortfolio by Jonathan Wen</title>
 </head>
 <body>
     <!-- NAVBAR -->
@@ -24,12 +24,12 @@
             <a href="/">Jonathan Wen</a>
        </div> 
        <div class="right">
-            <a href="http://github.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/JonnyWen" target="_blank" rel="noopener noreferrer">
                 <i class="fa-brands fa-github"></i>
                 <span>Github</span>
             </a>
 
-            <a href="http://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/jonathan-wen-5133a9295/" target="_blank" rel="noopener noreferrer">
                 <i class="fa-brands fa-linkedin"></i>
                 <span>Linkedin</span>
             </a>
@@ -47,21 +47,20 @@
         <section class="hero-section">
             <div class="text">
                 <h2>Hi, I'm Jonathan ✌️</h2>
-                <p>I am currently a second year student at the University of Waterloo,
-                majoring in Computer Science + Financial Management.
+                <p>I am currently a second year student at the University of Waterloo, <br> majoring in Computer Science + Finance (CFM).
                 </p>
                 <div class="links">
-                    <a href="#skills" target="_blank" rel="noopener noreferrer"> 
+                    <a href="#skills" rel="noopener noreferrer"> 
                         <i class="fa-solid fa-code"></i>
                         <span>Skills</span>
                     </a>
 
-                    <a href="#testimony" target="_blank" rel="noopener noreferrer"> 
+                    <a href="#testimony" rel="noopener noreferrer"> 
                         <i class="fa-solid fa-pen"></i>
                         <span>Testimony</span>
                     </a>
 
-                    <a href="#contact" target="_blank" rel="noopener noreferrer"> 
+                    <a href="#contact" rel="noopener noreferrer"> 
                         <i class="fa-solid fa-envelope"></i>
                         <span>Contact</span>
                     </a>
@@ -70,7 +69,7 @@
             </div>
 
             <div class="headshot">
-                <img src="images/IMG_2490.JPG" alt="jonathan headshot">
+                <img src="images/Jonathan_Wen.JPG" alt="jonathan headshot">
             </div>
 
         </section>
@@ -79,7 +78,7 @@
         <section id="skills" class="skills-section">
             <h2>Skills</h2>
             <div class="text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas accusamus unde totam perspiciatis, qui repellendus. Minima, pariatur exercitationem! Voluptatem cupiditate quod a dolores distinctio esse. Iste molestiae architecto hic sed.
+                Here are some languages and frameworks that I had hands on experience with, I also actively sharpen my skills everyday! 
             </div>
             <div class="cells">
                 <div class="cell">
@@ -96,14 +95,18 @@
                     <img src="images/javascript-logo.png" alt="javascript badge">
                     <span>JavaScript</span>
                 </div>
-
+                <!--
                 <div class="cell">
                     <img src="images/node_js_logo.png" alt="node.js badge">
                     <span>Node.js</span>
                 </div>
-
+                -->
                 <div class="cell">
-                    <img src="images/react-icon.webp" alt="react.js badge">
+                    <img src="images/jQuery_opt2.webp" alt="jquery badge">
+                    <span>jQuery</span>
+                </div>
+                <div class="cell">
+                    <img src="images/react-icon.png" alt="react.js badge">
                     <span>React.js</span>
                 </div>
             </div>
@@ -117,34 +120,38 @@
                 <div class="person-details">
                     <img src="images/battle-cat-air-cat.webp">
                     <p>Battle Cat</p>
-                    <p>Lorem, ipsum dolor.</p>
+                    <p><em>MoEw moEW!</em></p>
                 </div>
                 <div class="text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, saepe?
+                    Battle cat is on a secret mission to deliever Jonathan's next top secret project! Take a peek <a target="_blank">here</a> 👀
                 </div>
             </div>
         </section>
+        <hr>
         <!-- SECTION 4: Contact -->
         <section id="contact" class="contact-section">
             <h2>Contact</h2>
             <div class="group">
                 <div class="text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, unde repellendus nulla recusandae dolores accusamus dolorem corrupti quas blanditiis sint.</p>
+                    <p>Feel free to contact me about any inquieries! This feature works!</p>
                 </div>
                 <form>
                     <label for="name">Name</label>
-                    <input type="text" id="name">
+                    <input type="text" id="name" required>
 
                     <label for="email">Email</label>
-                    <input type="email" id="email">
+                    <input type="email" id="email" required>
 
                     <label for="message">Message</label>
-                    <textarea id="message" cols="30" rows="10"></textarea>
+                    <textarea id="message" cols="30" rows="10" placeholder="Please type your message here..." required></textarea>
 
                     <button type="submit">Send Message</button>
                 </form>
             </div>
         </section>
     </main>
+    <footer>
+        <p>Created by Jonathan Wen in summer of 2025!</p>
+    </footer>
 </body>
 </html>
