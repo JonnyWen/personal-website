@@ -140,17 +140,22 @@
                 <div class="text">
                     <p>Feel free to contact me about any inquiries! This feature works!</p>
                 </div>
-                <form>
+                <form id="form" action="https://api.web3forms.com/submit" method="POST">
+
+                    <input type="hidden" name="access_key" value="d516534a-c4c4-4021-b234-6a6d0b79274a">
+
                     <label for="name">Name</label>
-                    <input type="text" id="name" required>
+                    <input name ="name" type="text" id="name" required>
 
                     <label for="email">Email</label>
-                    <input type="email" id="email" required>
+                    <input name="email" type="email" id="email" required>
 
                     <label for="message">Message</label>
-                    <textarea id="message" cols="30" rows="10" placeholder="Please type your message here..." required></textarea>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Please type your message here..." required></textarea>
+                    
+                    <input type="hidden" name="redirect" value="https://web3forms.com/success">
 
-                    <button type="submit">Send Message</button>
+                    <button name="submit" type="submit">Send Message</button>
                 </form>
             </div>
         </section>
