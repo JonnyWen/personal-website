@@ -1,3 +1,4 @@
+// Typing -> Deleting Animation
 const dynamicText = document.querySelector(".hero-section .animated-typing span");
 const words = ["Love", "Like Art", "the Future", "Everything"];
 
@@ -34,11 +35,25 @@ const typeEffect = () => {
     }
 }
 
+// Ensures form resets after success submission page
 window.onload = function() {
     // Reset the form fields when the page loads
     document.getElementById("form").reset();
 };
 
+// Scroll animation
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry);
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        } else {
+            entry.target.classList.remove("show");
+        }
+    });
+});
 
+const hiddenElements = document.querySelectorAll(".hero-section, .skills-section, .testimony-section");
+hiddenElements.forEach((el) => observer.observe(el));
 
 typeEffect();
