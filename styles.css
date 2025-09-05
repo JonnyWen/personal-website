@@ -80,8 +80,41 @@ nav .right a span {
 .hero-section .text {
     flex: 5;
 }
+
 .hero-section .text h2{
     font-size: 45px;
+}
+.hero-section .text .animated-typing {
+    font-size: 2rem;
+    color: black;
+    font-weight: 600;
+}
+
+.hero-section .text .animated-typing span{
+    position: relative;
+    color: #B8860B;
+}
+
+.hero-section .text .animated-typing span::before {
+    content: "";
+    right: -8px;
+    top: 50%;
+    position: absolute;
+    height: 30px;
+    width: 2px;
+    background: #B8860B;
+    transform: translateY(-45%);
+    animation: blink 0.7s infinite;
+}
+
+.hero-section .text .animated-typing span .stop-blinking::before {
+    animation: none;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
 }
 
 .hero-section .text .links {
