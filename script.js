@@ -57,3 +57,4 @@ const hiddenElements = document.querySelectorAll(".hero-section, .skills-section
 hiddenElements.forEach((el) => observer.observe(el));
 
 typeEffect();
+
