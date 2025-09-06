@@ -1,8 +1,8 @@
 /* :root allows for global variables in css */
 :root {
-    --text-color: #1a1c20;
-    --link-color: #4a76ee;
-    --background-color: #eeeff1;
+    --text-color: black;
+    --link-color: rgb(92, 92, 194);
+    --background-color: #fff;
 
 }
 /* * selects all elements */
@@ -22,10 +22,26 @@ body {
     /* Tackles zooming out and centering */
     max-width: 1400px;
     margin: 0 auto;
+    --g1:#fff; --g2:#a2d2f4; --g3:#e9b8d4; --g4:#a9f5d0;
+    background: linear-gradient(120deg, var(--g1), var(--g2), var(--g3), var(--g4));
+    background-size: 400% 400%;
+    animation: wash 18s ease infinite;
+}
+
+@keyframes wash {
+    0%,100% { background-position: 0% 50%; }
+    50%     { background-position: 100% 50%; }
+}
+  @media (prefers-reduced-motion: reduce) {
+    body { animation: none; }
 }
 
 body hr {
     margin-bottom: 25px;
+    border: none;                
+    height: 2px;                 
+    background-color: var(--link-color); 
+    border-radius: 2px;    
 }
 
 /* styling for links */
@@ -112,7 +128,7 @@ nav .right a span {
 
 .hero-section .text .animated-typing span{
     position: relative;
-    color: #B8860B;
+    color: #BD53ED;
 }
 
 .hero-section .text .animated-typing span::before {
@@ -122,7 +138,7 @@ nav .right a span {
     position: absolute;
     height: 30px;
     width: 2px;
-    background: #B8860B;
+    background: #BD53ED;
     transform: translateY(-45%);
     animation: blink 0.7s infinite;
 }
@@ -165,12 +181,14 @@ nav .right a span {
 .hero-section .headshot img {
     width: 350px;
     border-radius: 50%;
+    border: 3px;
 }
 
 /* Section 2: Skills */
 .skills-section {
     padding: 0 50px;
     margin-bottom: 100px;
+    
 }
 
 .skills-section h2 {
@@ -198,10 +216,17 @@ nav .right a span {
     width: 200px;
     padding: 10px 20px;
     margin: 10px;
-    border: 1.5px solid #d3d3d3;
+    border: 1.5px solid transparent;
     border-radius: 5px;
 
 }
+
+.skills-section .cells .cell span {
+    font-family: "Space Grotesk", system-ui, sans-serif;
+    font-weight: bold;
+    font-size: 70px;
+}
+
 
 .skills-section .cells .cell span {
     font-size: 18px;
@@ -217,6 +242,7 @@ nav .right a span {
 /* Section 3: Testimony */
 .testimony-section {
     padding: 0 50px;
+    
     margin-bottom: 100px;
 }
 
@@ -311,12 +337,13 @@ nav .right a span {
     filter: brightness(.9);
 }
 
-/* Footer */
-footer {
-    margin-bottom: 100px;
+/* footer seciton */
+.footer-section {
+    margin-bottom: 25px;
 }
-footer p {
- text-align: center;
+
+.footer-section p {
+    font-family: 'Poppins', sans-serif;
 }
 
 @media (max-width: 850px) {
