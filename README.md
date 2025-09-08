@@ -1,6 +1,8 @@
 # personal-website
 This personal website was designed and developed by Jonathan Wen in the summer of 2025. It reflects both technical proficiency in frontend engineering and attention to user experience.
 
+Deployed: https://jonathanwen.netlify.app/
+
 ✨ Key Features
 
 Responsive design — layout and elements adapt seamlessly across mobile, tablet, and desktop breakpoints.
