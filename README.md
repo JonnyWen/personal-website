@@ -13,7 +13,7 @@ Styling architecture — thoughtful use of classes and IDs in CSS, emphasizing m
 
 🎨 Interactive UI Enhancements
 
-Dynamic typing and deleting text effect.
+Reusable dynamic typing and deleting text effect.
 
 Smooth scroll-based animations for engaging navigation.
 
