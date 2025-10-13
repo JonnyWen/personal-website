@@ -6,14 +6,6 @@
 
 }
 
-/* extra fonts */
-@font-face {
-    font-family: 'Wonderbar';
-    src: url('fonts/Wonderbar Demo.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-  }
-
 /* * selects all elements */
 * {
     margin: 0;
@@ -92,7 +84,7 @@ nav .right a:last-child {
 nav .right a span {
     margin-left: 5px;
 }
-.hero-section, .skills-section, .experience-section > *, .testimony-section {
+.hero-section, .skills-section, .professional-experience-section, .testimony-section {
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-100%);
@@ -100,25 +92,19 @@ nav .right a span {
 }
 
 @media(perfers-reduced-motion) {
-    .hero-section, .skills-section, .experience-section > *, .testimony-section {
+    .hero-section, .skills-section, .professional-experience-section, .testimony-section {
         transition: none;
     }
 }
 .hero-section.show,
 .skills-section.show,
-.experience-section.show > *,
+.professional-experience-section.show,
 .testimony-section.show {
     filter: blur(0);
     opacity: 1;
     transform: translateX(0);
 }
 
-/* Delay Show Effect */
-.experience-section.show > *:nth-child(1) { transition-delay: 0ms; }
-.experience-section.show > *:nth-child(2) { transition-delay: 150ms; }
-.experience-section.show > *:nth-child(3) { transition-delay: 250ms; }
-.experience-section.show > *:nth-child(4) { transition-delay: 350ms; }
-.experience-section.show > *:nth-child(5) { transition-delay: 400ms; }
 
 /* SECTION 1: Hero */
 .hero-section {
@@ -261,171 +247,145 @@ nav .right a span {
     object-fit: contain;
     border-radius: 2px;
 }
-/* Section 3: Experiences */
-.experience-section {
+/* Section 4: Professional Experience */
+.professional-experience-section {
     padding: 0 50px;
     margin-bottom: 100px;
 }
 
-.experience-section h2 {
+.professional-experience-section h2 {
     text-align: center;
     font-size: 35px;
+    margin-bottom: 50px;
 }
 
-.experience-section .cells .wea-cell {
-    margin-bottom: 40px;
-    display: flex;
-    align-items: center;
-}
-
-.experience-section .cells .wea-cell #wea-logo {
-    image-resolution: 300dpi;
-    width: 250px;
-    height: 250px;
-    margin-right: 15px;
-}
-
-.experience-section .cells .wea-cell p {
-    flex: 1;
-}
-
-.experience-section .cells #certified {
-    font-size: 25px;
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-.experience-section .cells .certification-cell {
-    display: flex;
-    flex-direction: column;  
-    align-items: flex-start;  
-    justify-content: flex-start;
-    gap: 16px;                
-    margin-bottom: 40px;
-    margin-left: 200px;
-}
-
-.experience-section .cells .certification-cell .certification {      
-    display: flex;  
-    justify-content: center;
-    align-items: center;
-    margin: 20px;    
-    margin-bottom: 40px;
-}
-
-.experience-section .cells .certification-cell .certification img {
-    height:50px;                 
-    width:auto;                  
-    display:block;
-    object-fit:cover;
-    margin-right: 30px;
-}
-
-.experience-section .cells .certification-cell .certification #linkedin {
-    height: 40px;
-    
-}
-.experience-section .cells .certification-cell .certification #google {
-    height: 140px;
-    
-}
-.experience-section .cells .certification-cell .certification span { 
+.timeline {
     position: relative;
-    font-family: "Source Sans", system-ui, sans-serif;
-    font-weight: bold;
-    font-size: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-left: 30px;
 }
 
-.experience-section .cells .certification-cell .certification:first-child span {
-    color: #0072b1;
-}
-.experience-section .cells .certification-cell .certification:nth-child(2) span {
-    color: #fa7821;
-}
-.experience-section .cells .certification-cell .certification:nth-child(3) span {
-    color: #ff3e30;
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--link-color), #e0e0e0);
 }
 
-.experience-section .cells #wonka-title {
-    font-size: 25px;
-    font-family: "Wonderbar", sans-serif;
-    color: purple;
-    text-align: center;
+.experience-item {
+    position: relative;
+    margin-bottom: 50px;
+    padding-left: 40px;
 }
-.experience-section .cells .cell-video{
-    margin-bottom: 40px;
-    gap: 0;
+
+.timeline-marker {
+    position: absolute;
+    left: -40px;
+    top: 20px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--link-color);
+    border: 3px solid white;
+    box-shadow: 0 0 10px rgba(92, 92, 194, 0.3);
+}
+
+.experience-content {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--link-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-content:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.experience-header {
+    margin-bottom: 15px;
+}
+
+.experience-header h3 {
+    font-size: 24px;
+    color: var(--text-color);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.company-period {
     display: flex;
-    align-items: center;
-}
-.experience-section .cells .cell-video .wonka-example {
-    margin-left: 100px;
-    clip-path: inset(-200px, 0, -200px, 0);
-    
-}
-.experience-section .cells .cell-video .wonka-tablet {
-    margin-right: -10px;
-    clip-path: inset(0 105px 0 105px);
-
-}
-.experience-section .cells .cell-video .wonka-mobile {
-    margin-left: -200px;
-    clip-path: inset(0 175px 0 175px);
-}
-
-.experience-section .cells .msswr-cell .group {
-    display: flex;
-}
-
-.experience-section .cells .msswr-cell .group #msswr-logo {
-    flex: 2;
-    image-resolution: 300dpi;
-    width: 250px;
-    height: 250px;
-    margin-right: 25px;
-}
-.experience-section .cells .msswr-cell .group .text-group {
-    margin-top: 55px;
-}
-
-.experience-section .cells .msswr-cell .group .text-group #msswr-title {
-    font-size: 25px;
-    color: #2e8b57;
-
-}
-
-.experience-section .cells .msswr-cell .group .text-group p {
-    flex: 8;
-}
-
-.experience-section .cells .msswr-cell {
-    display: flex;
-    flex-direction: row-reverse; 
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.experience-section .cells .msswr-cell #msswr-media {
+.company {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--link-color);
+}
+
+.period {
+    font-size: 14px;
+    color: #666;
+    background: #f0f0f0;
+    padding: 4px 12px;
+    border-radius: 15px;
+}
+
+.experience-description p {
+    color: var(--text-color);
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.achievements {
+    list-style: none;
+    margin: 15px 0;
+    padding: 0;
+}
+
+.achievements li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+.achievements li::before {
+    content: 'â–¸';
+    position: absolute;
+    left: 0;
+    color: var(--link-color);
+    font-weight: bold;
+}
+
+.technologies {
     display: flex;
-    margin-top: 70px;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
 }
 
-.experience-section .cells .msswr-cell #msswr-media video {
-    width: 350;
-    height: 350px;
-    margin-left: 25px;
+.tech-tag {
+    background: linear-gradient(135deg, var(--link-color), #7a7af4);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.experience-section .cells .msswr-cell #msswr-media #instagram-post {
-    image-resolution: 300dpi;
-    width: 300px;
-    height: 300px;
-    margin: 25px;
-}
-
-.experience-section .cells .msswr-cell p {
-    font-size: larger;
-}
 
 /* Section 4: Testimony */
 .testimony-section {
@@ -549,6 +509,28 @@ nav .right a span {
     .hero-section .headshot img {
         width: 300px;
     }
+     /* Section 4: Professional Experience */
+     .professional-experience-section {
+        padding: 0 20px;
+    }
+    
+    .timeline {
+        padding-left: 20px;
+    }
+    
+    .experience-item {
+        padding-left: 30px;
+    }
+    
+    .timeline-marker {
+        left: -30px;
+    }
+    
+    .company-period {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
 
     /* Section 3: Testimony */
     .testimony-section h2{
@@ -600,13 +582,47 @@ nav .right a span {
     .skills-section .cells .cell span {
         font-size: 16px;
     }
+    /* Section 4: Professional Experience */
+    .professional-experience-section {
+        padding: 0 20px;
+    }
+    
+    .timeline::before {
+        left: 10px;
+    }
+    
+    .timeline {
+        padding-left: 15px;
+    }
+    
+    .experience-item {
+        padding-left: 25px;
+    }
+    
+    .timeline-marker {
+        left: -25px;
+        width: 10px;
+        height: 10px;
+    }
+    
+    .experience-content {
+        padding: 20px 15px;
+    }
+    
+    .experience-header h3 {
+        font-size: 20px;
+    }
+    
+    .company {
+        font-size: 16px;
+    }
 
-    /* Section 3: Testimony */
+    /* Section 4: Testimony */
     .testimony-section {
         padding: 0 20px;
     }
 
-    /* Section 4: Contact */
+    /* Section 5: Contact */
     .contact-section {
         padding: 0 20px;
     }

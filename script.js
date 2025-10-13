@@ -38,15 +38,6 @@ function startTypeDelete(el, words) {
     typeEffect();
 }
 
-
-function initTyping(selector, words) {
-    let els = [];
-    if (typeof target === 'string') els = document.querySelectorAll(target);
-    else if (target instanceof Element) els = [target];
-    else if (target && typeof target.length === 'number') els = Array.from(target);
-    els.forEach(el => startTypeDelete(el, words));
-}
-
 // Ensures form resets after success submission page
 window.onload = function() {
     // Reset the form fields when the page loads
@@ -65,15 +56,9 @@ const observer = new IntersectionObserver((entries) => {
     });
 });
 
-const hiddenElements = document.querySelectorAll(".hero-section, .skills-section, .experience-section, .testimony-section");
+const hiddenElements = document.querySelectorAll(".hero-section, .skills-section, .professional-experience-section, .testimony-section");
 hiddenElements.forEach((el) => observer.observe(el));
 
 const dynamicText1 = document.querySelector(".hero-section .animated-typing span");
-const dynamicText2 = document.querySelector(".experience-section .cells .certification-cell .certification:nth-child(2) span");
-const dynamicText3 = document.querySelector(".experience-section .cells .certification-cell .certification:nth-child(3) span");
 const words1 = ["Love", "Like Art", "the Future", "Everything"];
-const words2 = ["Inbound Certified", "Content Marketing Certified", "Email Marketing Certified"];
-const words3 = ["Get Started using Google Analytics (GA4)", "Manage GA4 Data and Learn to Read Reports"];
 startTypeDelete(dynamicText1, words1);
-startTypeDelete(dynamicText2, words2);
-startTypeDelete(dynamicText3, words3);
